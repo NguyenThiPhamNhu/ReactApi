@@ -15,6 +15,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Posts from './components/Posts';
 import Post from './components/Post';
+import Add from './components/Add';
+import Admin from './components/Admin';
 
 
 class App extends React.Component {
@@ -38,8 +40,19 @@ class App extends React.Component {
             <li>
               <a href="/posts">Posts</a>
             </li>
+            <li>
+              <a href="/add">Add</a>
+            </li>
+            <li>
+              <a href="/admin">Admin</a>
+            </li>
+            <li></li>
             
           </ul>
+          <form className="form-inline my-2 my-lg-0">
+                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+              </form>
         </div>
         
         
@@ -59,6 +72,13 @@ class App extends React.Component {
               <Route path="/about">
                   <About />
               </Route>
+              <Route path="/add" >
+                  <Add />
+              </Route>
+              <Route path="/admin" >
+                  <Admin />
+              </Route>
+              
 
               <Route path="/posts" exact>
                   <Posts />

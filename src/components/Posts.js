@@ -33,7 +33,6 @@ class Posts extends Component {
                <center><h1>Posts</h1></center> 
                 {this.state.posts.map((item) =>
                     <div>
-
                         
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                             <div class="thumbnail">
@@ -42,9 +41,14 @@ class Posts extends Component {
                                     <h1>{item.title}</h1>
                                     <p>
                                     <h2>{item.id}</h2>
+                                    <h2>{item.comment}</h2>
+                                    {/* <h1>Title:{this.state.posts.title}</h1>
+                                     <h1>Comment:{this.state.posts.comment}</h1> */}
                                     </p>
                                     <p>
-                                    <Link to={"/posts/" + item.id}>Detail</Link>
+                                    {/* <Link to={"/posts/" + item.id}>Detail</Link> */}
+                                    <a class="btn btn-danger" href={"/posts/" + item.id} role="button">Detail</a>
+                                    <a class="btn btn-success" href={"/posts/" + item.id} role="button">Add</a>
                                     </p>
                                 </div>
                             </div>
@@ -55,7 +59,9 @@ class Posts extends Component {
                         <Link to={"/posts/" + item.id}>Detail</Link>
                         <hr /> */}
                     </div>
+                    
                 )}
+
             </div>
         )
     }
